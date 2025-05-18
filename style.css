@@ -127,6 +127,12 @@ main {
     font-weight: bold;
     text-align: center;
     font-size: 1.1em;
+    display: none; /* Inicialmente oculto */
+}
+
+#mensajes-app.error,
+#mensajes-app.success {
+    display: block; /* Mostrar cuando tenga estas clases */
 }
 
 #mensajes-app.error {
@@ -153,4 +159,91 @@ footer {
     width: 100%;
     padding: 15px 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para pantallas con un ancho máximo de 600px (la mayoría de los teléfonos) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Añadir un poco de padding general al body en móviles */
+    }
+
+    .top-bar {
+        padding: 15px 0; /* Reducir un poco el padding superior en móviles */
+    }
+
+    .top-bar img {
+        max-height: 60px; /* Reducir el tamaño del logo en móviles */
+    }
+
+    header {
+        margin-bottom: 15px; /* Reducir el margen inferior del header en móviles */
+    }
+
+    header h1 {
+        font-size: 2em; /* Reducir el tamaño del título en móviles */
+        margin-top: 5px;
+    }
+
+    main {
+        width: 95%; /* Ocupar casi todo el ancho en móviles */
+        padding: 20px; /* Reducir el padding del main en móviles */
+        border-radius: 8px; /* Ligeramente menos redondeado en móviles */
+    }
+
+    #reloj {
+        font-size: 1.8em; /* Reducir el tamaño del reloj en móviles */
+        margin-bottom: 15px;
+    }
+
+    #selector-container {
+        margin-bottom: 15px;
+    }
+
+    #selector-container select {
+        padding: 12px;
+        font-size: 1em; /* Reducir el tamaño de la fuente del selector en móviles */
+        border-radius: 5px; /* Menos redondeado en móviles */
+    }
+
+    #registrar-asistencia {
+        padding: 12px 25px;
+        font-size: 1.1em; /* Reducir el tamaño de la fuente del botón en móviles */
+        border-radius: 5px; /* Menos redondeado en móviles */
+    }
+
+    #mensajes-app {
+        margin-top: 15px;
+        font-size: 1em; /* Reducir el tamaño de la fuente de los mensajes en móviles */
+        padding: 10px;
+    }
+
+    footer {
+        margin-top: 15px;
+        font-size: 0.8em; /* Reducir el tamaño de la fuente del footer en móviles */
+        padding: 10px 0;
+    }
+}
+
+/* Estilos para pantallas aún más pequeñas (ej: algunos feature phones) */
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    #reloj {
+        font-size: 1.5em;
+    }
+
+    #selector-container select {
+        font-size: 0.9em;
+    }
+
+    #registrar-asistencia {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    #mensajes-app {
+        font-size: 0.9em;
+    }
 }
